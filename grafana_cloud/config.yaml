@@ -24,7 +24,11 @@ map:
   - addon_config:rw
 ports:
   80/tcp: null
+  5514/udp: null
+  6514/tcp: null
 ports_description:
   80/tcp: "Debug UI"
+  5514/udp: "Syslog UDP receiver (e.g. loki.source.syslog)"
+  6514/tcp: "Syslog TCP/TLS receiver (e.g. loki.source.syslog)"
 webui: "http://[HOST]:[PORT:80]/"
 image: "ghcr.io/grafana/hass-addon-grafana-cloud-{arch}"
