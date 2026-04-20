@@ -19,6 +19,8 @@ schema:
   scrape_interval: str?
   log_level: list(debug|info|warn|error)
 homeassistant_api: true
+apparmor: false
+journald: true
 map:
   - homeassistant_config
   - addon_config:rw
@@ -26,9 +28,11 @@ ports:
   80/tcp: null
   5514/udp: null
   6514/tcp: null
+  9999/tcp: null
 ports_description:
   80/tcp: "Debug UI"
   5514/udp: "Syslog UDP receiver (e.g. loki.source.syslog)"
   6514/tcp: "Syslog TCP/TLS receiver (e.g. loki.source.syslog)"
+  9999/tcp: "Loki HTTP push API receiver (e.g. loki.source.api)"
 webui: "http://[HOST]:[PORT:80]/"
 image: "ghcr.io/grafana/hass-addon-grafana-cloud-{arch}"
