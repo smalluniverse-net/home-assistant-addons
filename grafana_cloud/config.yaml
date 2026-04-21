@@ -27,11 +27,13 @@ map:
 ports:
   80/tcp: null
   5514/udp: null
+  5515/udp: null
   6514/tcp: null
   9999/tcp: null
 ports_description:
   80/tcp: "Debug UI"
-  5514/udp: "Syslog UDP receiver (e.g. loki.source.syslog)"
+  5514/udp: "Syslog UDP receiver -- UniFi CEF (via syslog-ng relay)"
+  5515/udp: "Syslog UDP receiver -- UniFi Network standard syslog"
   6514/tcp: "Syslog TCP/TLS receiver (e.g. loki.source.syslog)"
   9999/tcp: "Loki HTTP push API receiver (e.g. loki.source.api)"
 webui: "http://[HOST]:[PORT:80]/"
