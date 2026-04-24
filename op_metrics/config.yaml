@@ -1,0 +1,17 @@
+name: "1Password Metrics"
+description: "Prometheus exporter for 1Password vault metrics"
+version: "1.0.0"
+slug: "op_metrics"
+init: false
+arch:
+  - amd64
+  - aarch64
+options:
+  op_service_account_token: ""
+schema:
+  op_service_account_token: password
+ports:
+  9101/tcp: 9101
+ports_description:
+  9101/tcp: "Prometheus /metrics endpoint"
+image: "ghcr.io/smalluniverse-net/hass-addon-op-metrics-{arch}"

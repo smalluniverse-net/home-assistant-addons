@@ -1,0 +1,2 @@
+#!/usr/bin/with-contenv bashio
+bashio::log.info "op-metrics exited with code ${1}"

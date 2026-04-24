@@ -1,0 +1,18 @@
+#!/usr/bin/with-contenv bashio
+
+# ==============================================================================
+# Start the op-metrics exporter
+# s6-overlay docs: https://github.com/just-containers/s6-overlay
+# ==============================================================================
+
+OP_SERVICE_ACCOUNT_TOKEN=$(bashio::config 'op_service_account_token')
+
+if bashio::var.is_empty "${OP_SERVICE_ACCOUNT_TOKEN}"; then
+    bashio::log.fatal "op_service_account_token is not set; configure it in the add-on options"
+    exit 1
+fi
+
+export OP_SERVICE_ACCOUNT_TOKEN
+
+bashio::log.info "Starting op-metrics exporter on 0.0.0.0:9101"
+exec python3 /opt/op_metrics.py
