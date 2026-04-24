@@ -14,4 +14,3 @@ ports:
   9101/tcp: 9101
 ports_description:
   9101/tcp: "Prometheus /metrics endpoint"
-image: "ghcr.io/smalluniverse-net/hass-addon-op-metrics-{arch}"
