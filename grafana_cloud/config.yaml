@@ -34,11 +34,11 @@ ports:
   9999/tcp: null
 ports_description:
   80/tcp: "Debug UI"
-  5514/udp: "Syslog UDP receiver -- UniFi CEF (via syslog-ng relay)"
-  5515/udp: "Syslog UDP receiver -- UniFi Network standard syslog"
-  5516/udp: "Syslog UDP receiver -- UniFi CyberSecure Traffic Logging (CEF)"
-  5517/udp: "Syslog UDP receiver -- UniFi IDS/IPS Threat events (Suricata EVE JSON via syslog-ng relay)"
-  6514/tcp: "Syslog TCP/TLS receiver (e.g. loki.source.syslog)"
-  9999/tcp: "Loki HTTP push API receiver (e.g. loki.source.api)"
+  5514/udp: "Override-only: Syslog UDP receiver (requires custom config.alloy listeners)"
+  5515/udp: "Override-only: Syslog UDP receiver (requires custom config.alloy listeners)"
+  5516/udp: "Override-only: Syslog UDP receiver (requires custom config.alloy listeners)"
+  5517/udp: "Override-only: Syslog UDP receiver (requires custom config.alloy listeners)"
+  6514/tcp: "Override-only: Syslog TCP/TLS receiver (requires custom config.alloy listeners)"
+  9999/tcp: "Override-only: Loki HTTP push receiver (requires custom config.alloy listeners)"
 webui: "http://[HOST]:[PORT:80]/"
 image: "ghcr.io/grafana/hass-addon-grafana-cloud-{arch}"
