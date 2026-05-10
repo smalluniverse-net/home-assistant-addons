@@ -11,7 +11,7 @@ grafana_cloud.stack "receivers" {
 }
 
 logging {
-  level    = "info"
+  level    = env("LOG_LEVEL")
   format   = "logfmt"
   write_to = [loki.process.alloy.receiver]
 }
