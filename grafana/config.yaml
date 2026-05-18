@@ -21,7 +21,13 @@ map:
 options:
   plugins: []
   custom_plugins: []
-  env_vars: []
+  env_vars:
+    - name: GF_AUTH_ANONYMOUS_ENABLED
+      value: "true"
+    - name: GF_AUTH_ANONYMOUS_ORG_ROLE
+      value: Admin
+    - name: GF_FEATURE_TOGGLES_ENABLE
+      value: sqlExpressions
   ssl: true
   certfile: fullchain.pem
   keyfile: privkey.pem
