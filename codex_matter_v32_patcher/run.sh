@@ -117,7 +117,7 @@ done < "$WORK/target-paths.txt"
 
 docker exec "$cid" sh -c "node --check /app/node_modules/@matter-server/ble-proxy/dist/esm/ProxyBleChannel.js"
 docker exec "$cid" sh -c "grep -q 'BLE candidate decision' /app/node_modules/@matter-server/ble-proxy/dist/esm/ProxyBleChannel.js"
-docker exec "$cid" sh -c "grep -q 'outcome=\\${outcome}' /app/node_modules/@matter-server/ble-proxy/dist/esm/ProxyBleChannel.js"
+docker exec "$cid" sh -c 'grep -q "outcome=${outcome}" /app/node_modules/@matter-server/ble-proxy/dist/esm/ProxyBleChannel.js'
 docker exec "$cid" sh -c "grep -q 'btp_session' /app/node_modules/@matter-server/ble-proxy/src/ProxyBleChannel.ts"
 docker exec "$cid" sh -c "grep -q 'getAlternateDiscoveredDevices' /app/node_modules/@matter/protocol/dist/esm/common/BleScanner.js"
 docker exec "$cid" sh -c "grep -q 'proxyId' /app/node_modules/@matter-server/ble-proxy/dist/esm/ProxyBleClient.js"

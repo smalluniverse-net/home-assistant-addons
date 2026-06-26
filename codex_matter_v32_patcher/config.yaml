@@ -1,5 +1,5 @@
 ---
-version: 0.2.0
+version: 0.2.1
 slug: codex_matter_v32_patcher
 name: Codex Matter V3.2 Patcher
 description: One-shot V3.2 phase-logging patcher for the official Matter Server add-on container.
