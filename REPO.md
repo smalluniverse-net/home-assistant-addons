@@ -13,7 +13,7 @@ Promoted from `~/GitHub/project/OpenAI/Drafts/Repo Manifests/haos-addons-work.RE
 - Writes allowed by default: no for deployment-affecting code or config without explicit Claude/user approval. Mechanical hygiene (e.g. `.gitignore` `.DS_Store`) is permitted on a feature branch with no direct push to `main`.
 - Deployment surface: Home Assistant add-ons, Dockerfiles, add-on `config.yaml` schemas, add-on rootfs, exposed ports, AppArmor settings, GitHub workflows, container images.
 - Secret surfaces: add-on options and schemas such as `access_token`, Home Assistant API access, addon config mappings, and any runtime files under rootfs that consume token values.
-- Required validation: read project `CLAUDE.md`, `Memory/MEMORY.md`, `Memory/decisions_log.md`, `Memory/reference_cross_agent_staging.md`, the active `OpenAI/Approved/` contract, and relevant project HAOS/observability canonical sources before proposing changes. Live HAOS changes are off-limits to non-Claude agents.
+- Required validation: read project `CLAUDE.md`, `Memory/MEMORY.md`, `Memory/decisions-digest.md` (the session-start index of the decisions ledger; grep the full `Memory/decisions_log.md` on decision-recall triggers, do not full-load it), `Memory/reference_cross_agent_staging.md`, the active `OpenAI/Approved/` contract, and relevant project HAOS/observability canonical sources before proposing changes. Live HAOS changes are off-limits to non-Claude agents.
 - Status pointer: project canonical HAOS, observability, and automation state lives in `~/GitHub/project/Inventory.md`, `~/GitHub/project/Status/Observability Status.md`, `~/GitHub/project/Memory/reference_observability_config_change_rule.md`, and related canonical files.
 
 ## Instruction Surface
